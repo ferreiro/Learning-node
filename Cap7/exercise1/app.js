@@ -25,6 +25,23 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 
+/*
+  Create a get methods for about, contact and products
+*/
+
+app.get('/about', function(req, res) {
+  res.send('Hello you\'re on about page');
+});
+
+app.get('/contact', function(req, res) {
+  res.end('Hello! welcome to the contact page');
+});
+
+app.get('/products', function(req, res) {
+  res.send('welcome to the products page');
+});
+
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
