@@ -1,0 +1,40 @@
+
+
+block content
+
+
+
+
+
+	h2 Form Example
+	form(method='post', action='/')
+		fieldset
+			legend Add a user
+
+			p
+				label First Name
+				input(name='user[first_name]')
+			p
+				label Last Name
+				input(name='user[surname]')
+
+			p
+				input(type='submit', value='Save')
+
+
+
+
+
+	header.header
+		.logo
+			a(href:'index.html') Hola
+
+	// Single comments
+	//- No output comments
+
+	- var menu = [ 'Home', 'About us', 'Contact' ];
+
+	each val in menu 
+		li= val
+
+

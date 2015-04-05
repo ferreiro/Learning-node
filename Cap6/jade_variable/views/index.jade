@@ -1,0 +1,32 @@
+extends layout
+
+block content
+	- var foo = 'Hola. Soy un texto jadeeeeeeeeee'
+	p #{foo}
+
+	<!-- Definimos bucles en Jade -->
+
+	- var menu = ["Home", "About me", "Contact", "Social Networks"]
+
+	ul
+		each m in menu
+			li= m
+
+	ul
+		each m in menu
+			li
+				a(href='/#{m}')
+					=m
+
+	- var usingJade = true;
+
+	if (usingJade) 
+		p 	Yeaaaaaaah, you're using jade
+	else
+		p	Ohhhhh! You're not using jade. Install it!
+
+
+	include includes/footer.jade
+
+	script
+		alert('Hola')

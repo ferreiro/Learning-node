@@ -1,0 +1,24 @@
+<!Doctype html>
+<head>
+
+</head>
+<body>
+	
+	<h1 id="text">Hello</h1>
+	
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+
+
+	<script type="text/javascript">
+		/*
+		Execution of both thigs. First the alert, then the hice
+		$("#text").hide("slow");
+		alert("Hola");
+		*/ 
+
+		/*  Callback */
+		$("#text").hide("slow", function(){
+			alert("Hola");
+		});
+	</script>
+</body>
