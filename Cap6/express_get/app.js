@@ -25,8 +25,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 
+// Make a Get and post
+
 app.get('/about', function(req, res) {
-    res.end('Holaaaaa');
+  res.send('Hey, you\'re on my about page');
+});
+
+app.post('/', function(req, res) {
+  res.send(req.body)
 });
 
 // catch 404 and forward to error handler

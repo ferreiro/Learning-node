@@ -1,0 +1,8 @@
+extends layout
+
+block content
+	h1	This is my first form on #{title}
+	form(method='post' action='/')
+		input(type='text', name='uName',placeholder='Your name')
+		input(type='email', name='uEmail', placeholder='Your email')
+		input(type='submit', value='Send form')

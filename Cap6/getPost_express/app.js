@@ -25,9 +25,21 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 
-app.post('/', function(req, res) {
-  res.end(req.body);
+// Define get and post functions
+
+app.get('/contact', function(req, res) {
+  res.send('Hey, you can email me at: me@jgferreiro.com');
 })
+
+app.get('/about', function(req, res) {
+  //- res.end('Hey, this is my about page'); This also work
+  res.send('Hey, O\'m Jorge');
+})
+
+app.post('/', function(req, res) {
+  res.send(req.body);
+});
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
