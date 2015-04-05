@@ -1,0 +1,23 @@
+extends layout
+
+block content
+	h1= title
+	h2 This is the data for #{user.name}
+
+	.separator(style='width:100%; height:2px; background:#cecece; margin:20px 0; display:inline-blog;')
+
+	p
+		span Name
+		|  #{user.name}
+
+	p
+		span Surname
+		|  #{user.surname}
+
+	p
+		span City
+		|  #{user.city}
+
+	p
+		span Phone
+		|  #{user.phone}
